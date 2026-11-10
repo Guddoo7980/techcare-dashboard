@@ -1,0 +1,53 @@
+/* Design tokens — single source of truth for colour, type, spacing and radii. */
+:root {
+  /* Colour */
+  --color-navy: #072635;
+  --color-muted: #707070;
+  --color-teal: #01f0d0;
+  --color-teal-soft: #d8fcf7;
+  --color-page: #f6f7f8;
+  --color-surface: #ffffff;
+  --color-line: #ededed;
+  --color-purple-soft: #f4f0fe;
+  --color-blue-soft: #e0f3fa;
+  --color-pink-soft: #ffe6e9;
+  --color-rose-soft: #ffe6f1;
+
+  --color-systolic: #e66fd2;
+  --color-diastolic: #8c6fe6;
+  --color-heart-rate: #e5566b;
+  --color-respiratory: #2b9fd8;
+  --color-temperature: #f59e0b;
+
+  --color-high-bg: #ffe9e4;
+  --color-high-text: #b42318;
+  --color-low-bg: #e4f0ff;
+  --color-low-text: #1d4ed8;
+  --color-normal-bg: #ddf8ee;
+  --color-normal-text: #067647;
+
+  /* Typography */
+  --font-sans: 'Manrope', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --text-xs: 0.75rem;
+  --text-sm: 0.8125rem;
+  --text-md: 0.875rem;
+  --text-lg: 1rem;
+  --text-xl: 1.125rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+  --weight-extrabold: 800;
+
+  /* Shape & elevation */
+  --radius-card: 16px;
+  --radius-pill: 999px;
+  --shadow-soft: 0 4px 24px rgba(7, 38, 53, 0.05);
+  --shadow-pop: 0 16px 48px rgba(7, 38, 53, 0.18);
+
+  /* Layout */
+  --gap: 18px;
+  --page-max-width: 1680px;
+}

@@ -1,0 +1,129 @@
+.patient-list {
+  grid-area: patients;
+  display: flex;
+  flex-direction: column;
+  min-height: 520px;
+  padding: 24px 0 8px;
+}
+
+.patient-list__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  margin-bottom: 14px;
+}
+
+.patient-list__search {
+  display: grid;
+  place-items: center;
+  padding: 4px;
+  border: 0;
+  background: transparent;
+}
+
+/* The list scrolls inside the card, so the card height is set by the grid
+   (matching the columns next to it) rather than by the number of patients. */
+.patient-list__body {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+}
+
+.patient-list__items {
+  position: absolute;
+  inset: 0;
+  overflow-y: auto;
+}
+
+.patient-list__item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px 14px 20px;
+  border-left: 4px solid transparent;
+}
+
+.patient-list__item--active {
+  background: var(--color-teal-soft);
+  border-left-color: var(--color-teal);
+}
+
+.patient-list__text {
+  flex: 1;
+  min-width: 0;
+}
+
+.patient-list__name {
+  overflow: hidden;
+  font-size: var(--text-md);
+  font-weight: var(--weight-bold);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.patient-list__meta {
+  margin-top: 2px;
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+}
+
+.patient-list__more {
+  display: grid;
+  place-items: center;
+  padding: 4px;
+  border: 0;
+  background: transparent;
+}
+
+/* ---- Tablet & mobile: the list becomes a horizontal strip ---- */
+@media (max-width: 1199px) {
+  .patient-list {
+    min-height: 0;
+    padding-bottom: 20px;
+  }
+
+  .patient-list__body {
+    flex: none;
+  }
+
+  .patient-list__items {
+    position: static;
+    display: flex;
+    gap: 12px;
+    padding: 0 24px 8px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x proximity;
+    scroll-padding-inline: 24px;
+  }
+
+  .patient-list__item {
+    flex: 0 0 240px;
+    padding: 12px 16px;
+    border: 1px solid var(--color-line);
+    border-radius: 14px;
+    scroll-snap-align: start;
+  }
+
+  .patient-list__item--active {
+    border-color: var(--color-teal);
+  }
+
+  .patient-list__more {
+    display: none;
+  }
+}
+
+@media (max-width: 639px) {
+  .patient-list__header,
+  .patient-list__items {
+    padding-right: 16px;
+    padding-left: 16px;
+    scroll-padding-inline: 16px;
+  }
+
+  .patient-list__item {
+    flex-basis: 210px;
+  }
+}

@@ -1,0 +1,21 @@
+.level {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: var(--text-md);
+}
+
+.level__arrow {
+  width: 0;
+  height: 0;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+}
+
+.level__arrow--up {
+  border-bottom: 7px solid var(--color-navy);
+}
+
+.level__arrow--down {
+  border-top: 7px solid var(--color-navy);
+}

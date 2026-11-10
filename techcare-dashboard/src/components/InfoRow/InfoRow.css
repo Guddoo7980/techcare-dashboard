@@ -1,0 +1,37 @@
+.info-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-width: 0;
+}
+
+.info-row__icon {
+  display: grid;
+  flex-shrink: 0;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--color-page);
+}
+
+.info-row__icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.info-row__text {
+  min-width: 0;
+}
+
+.info-row__label {
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+}
+
+.info-row__value {
+  margin: 1px 0 0;
+  font-size: var(--text-md);
+  font-weight: var(--weight-extrabold);
+  overflow-wrap: anywhere;
+}

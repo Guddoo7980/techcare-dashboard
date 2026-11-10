@@ -1,0 +1,55 @@
+.diagnostic-list {
+  grid-area: diagnostics;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.diagnostic-list__scroll {
+  max-height: 240px;
+  overflow: auto;
+}
+
+.diagnostic-list__table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--text-md);
+}
+
+.diagnostic-list__table th {
+  position: sticky;
+  top: 0;
+  padding: 14px 16px;
+  background: var(--color-page);
+  font-weight: var(--weight-bold);
+  text-align: left;
+  white-space: nowrap;
+}
+
+.diagnostic-list__table th:first-child {
+  border-radius: 24px 0 0 24px;
+}
+
+.diagnostic-list__table th:last-child {
+  border-radius: 0 24px 24px 0;
+}
+
+.diagnostic-list__table td {
+  padding: 18px 16px;
+  border-bottom: 1px solid var(--color-line);
+  vertical-align: middle;
+}
+
+.diagnostic-list__table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.diagnostic-list__table th:nth-child(1),
+.diagnostic-list__table td:nth-child(1) {
+  width: 28%;
+}
+
+.diagnostic-list__table th:nth-child(3),
+.diagnostic-list__table td:nth-child(3) {
+  width: 22%;
+}

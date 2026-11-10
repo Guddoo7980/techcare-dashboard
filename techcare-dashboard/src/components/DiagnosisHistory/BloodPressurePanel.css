@@ -1,0 +1,106 @@
+.bp-panel {
+  flex: 1; /* absorbs spare height so the card matches its row neighbours */
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 210px;
+  gap: 8px;
+  padding: 20px 22px;
+  background: var(--color-purple-soft);
+  border-radius: 12px;
+}
+
+.bp-panel__chart {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.bp-panel__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.bp-panel__title {
+  font-size: var(--text-xl);
+  font-weight: var(--weight-extrabold);
+}
+
+.bp-panel__range {
+  padding: 4px 22px 4px 0;
+  border: 0;
+  border-radius: 4px;
+  background: transparent
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23072635' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E")
+    no-repeat right center / 16px;
+  font-size: var(--text-md);
+  font-weight: var(--weight-medium);
+  appearance: none;
+  cursor: pointer;
+}
+
+.bp-panel__canvas {
+  flex: 1;
+  min-height: 220px;
+}
+
+.bp-panel__legend {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+  padding-left: 24px;
+}
+
+.bp-panel__rule {
+  width: 100%;
+  margin: 0;
+  border: 0;
+  border-top: 1px solid rgba(7, 38, 53, 0.14);
+}
+
+.bp-panel__legend-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  font-size: var(--text-md);
+  font-weight: var(--weight-bold);
+}
+
+.bp-panel__dot {
+  width: 14px;
+  height: 14px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+}
+
+.bp-panel__legend-value {
+  margin-bottom: 6px;
+  font-size: 1.375rem;
+  font-weight: var(--weight-extrabold);
+  line-height: 1.1;
+}
+
+@container diagnosis (max-width: 600px) {
+  .bp-panel {
+    grid-template-columns: 1fr;
+    padding: 16px;
+  }
+
+  .bp-panel__canvas {
+    min-height: 200px;
+  }
+
+  .bp-panel__legend {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 16px 32px;
+    padding: 16px 0 0;
+  }
+
+  .bp-panel__rule {
+    display: none;
+  }
+}

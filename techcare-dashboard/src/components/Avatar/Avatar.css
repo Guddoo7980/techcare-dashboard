@@ -1,0 +1,13 @@
+.avatar {
+  flex-shrink: 0;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #e8eef1;
+}
+
+.avatar--initials {
+  display: grid;
+  place-items: center;
+  color: #3a5a6b;
+  font-weight: var(--weight-bold);
+}
